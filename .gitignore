@@ -214,5 +214,16 @@ marimo/_static/
 marimo/_lsp/
 __marimo__/
 
+# Local score and audio inputs without confirmed distribution rights.
+/music/midi/*.mid
+/music/mp3/*.mp3
+
+# Score fragment derived from the local MIDI input; retain locally until rights are confirmed.
+/loop-engineering/runs/artifacts/2026-09-29T17-09-02+03-00-fly-drummer-mvp-FD-1.C2-score-fragment.json
+
 # Streamlit
 .streamlit/secrets.toml
+
+# Local specifications and loop-engineering records.
+/docs/
+/loop-engineering/

@@ -1,0 +1,27 @@
+[project]
+name = "flydrummer-brain"
+version = "0.1.0"
+description = "Reproducible MaleCNS v1.0 trace smoke for Fly Drummer"
+requires-python = ">=3.12,<3.13"
+dependencies = ["flybrain", "numpy>=2"]
+
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project.scripts]
+flydrummer-brain-trace = "flydrummer_brain.malecns:main"
+flydrummer-brain-sensory-trace = "flydrummer_brain.sensory:main"
+flydrummer-brain-evaluate = "flydrummer_brain.evaluation:main"
+
+[dependency-groups]
+dev = ["pytest>=8,<9"]
+
+[tool.uv.sources]
+flybrain = { git = "https://github.com/HEREISCB/flybrain.git", rev = "c7878b9ee273564186acf8cbdef96289335efa5e" }
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
